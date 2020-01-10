@@ -1,0 +1,98 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 300
+  ClientWidth = 635
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DLLabel1: TDLLabel
+    Left = 32
+    Top = 18
+    Width = 88
+    Height = 13
+    Caption = 'Caminho do banco'
+  end
+  object detSQL: TDLEdit
+    Left = 32
+    Top = 88
+    Width = 154
+    Height = 21
+    ReadOnly = False
+    TabOrder = 0
+    Text = 'SET GENERATOR G_MES TO 1'
+    Visible = True
+    Validation = []
+    Decimals = 2
+    Nullable = True
+    EnabledColor = clWindow
+    DisabledColor = clBtnFace
+    ParentDisabledColor = True
+  end
+  object DLButton1: TDLButton
+    Left = 192
+    Top = 86
+    Width = 169
+    Height = 25
+    Caption = 'TDLQuery'
+    TabOrder = 1
+    OnClick = DLButton1Click
+  end
+  object DLButton2: TDLButton
+    Left = 192
+    Top = 117
+    Width = 169
+    Height = 25
+    Caption = 'DLButton2'
+    TabOrder = 2
+  end
+  object DLButton3: TDLButton
+    Left = 192
+    Top = 148
+    Width = 169
+    Height = 25
+    Caption = 'DLButton3'
+    TabOrder = 3
+  end
+  object detCaminho: TDLEdit
+    Left = 32
+    Top = 37
+    Width = 377
+    Height = 21
+    ReadOnly = False
+    TabOrder = 4
+    Text = 'c:\dados\ac\ac.gdb'
+    Visible = True
+    Validation = []
+    Decimals = 2
+    Nullable = True
+    EnabledColor = clWindow
+    DisabledColor = clBtnFace
+    ParentDisabledColor = True
+  end
+  object DLServerConnection1: TDLServerConnection
+    ConnectionName = 'c1'
+    DatabaseKind = dkInterbase
+    UserName = 'SYSDBA'
+    Password = 'masterkey'
+    UpperOnQueries = uqNormallyUse
+    Left = 448
+    Top = 32
+  end
+  object DLQuery1: TDLQuery
+    Filtered = False
+    ConnectionName = 'c1'
+    Server = DLServerConnection1
+    AutoMount = False
+    FetchRecordCount = 60
+    Left = 528
+    Top = 32
+  end
+end
